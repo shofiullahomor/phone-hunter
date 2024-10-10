@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phone Hunter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style></style>
+  </head>
+  <body>
+    <!-- nav sta+rt -->
+    <div class="navbar bg-base-100">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </div>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+          >
+            <li><a>Item 1</a></li>
+
+            <li><a>Item 3</a></li>
+          </ul>
+        </div>
+        <a class="btn btn-ghost text-xl">Phone Hunter</a>
+      </div>
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+          <li><a>Home</a></li>
+
+          <li><a>All Phone</a></li>
+        </ul>
+      </div>
+      <div class="navbar-end">
+        <a class="btn">Buy Now</a>
+      </div>
+    </div>
+    <!-- n+av end -->
+    <div class="w-2/5 mx-auto">
+      <label class="input input-bordered flex items-center gap-2">
+        <input id="searchBox" type="text" class="grow" placeholder="Search" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 16 16"
+          fill="currentColor"
+          class="h-4 w-4 opacity-70"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+            clip-rule="evenodd"
+          />
+        </svg>
+        <button
+          onclick="handleSearch()"
+          class="bg-blue-500 px-4 py-2 font-semibold hover:bg-blue-600 focus: outline-none focus: right-2 focus:ring-blue-500 rounded-lg text-white text-center flex items-center justify-center"
+          type="submit"
+        >
+          Search
+        </button>
+      </label>
+    </div>
+    <!-- search button end -->
+    <!-- show all button sta+rt -->
+    <div class="text-center">
+      <button onclick="handleShowAll()" class="btn border-t-gray-500 my-5">
+        show all
+      </button>
+    </div>
+    <!-- show all button en+d -->
+    <!-- show all p+hones -->
+    <div
+      id="phones-container"
+      class="phones-container flex justify-around items-center flex-wrap"
+    >
+      <!-- spinner sta+rt -->
+      <div
+        id="snipper"
+        class="hidden w-2/5 mx-auto flex items-center justify-center"
+      >
+        <span class="loading loading-bars loading-xs"></span>
+        <span class="loading loading-bars loading-sm"></span>
+        <span class="loading loading-bars loading-md"></span>
+        <span c+lass="loading loading-bars loading-lg"></span>
+      </div>
+    </div>
+    <!-- spinner end -->
+    <!-- show modal -->
+    <!-- Open the modal using ID.showModal() method -->
+
+    <div id="modal-container"></div>
+    <!-- footer sta+rt -->
+    <footer class="footer bg-neutral text-neutral-content p-10">
+      <nav>
+        <h6 class="footer-title">Services</h6>
+        <a class="link link-hover">Branding</a>
+        <a class="link link-hover">Design</a>
+        <a class="link link-hover">Marketing</a>
+        <a class="link link-hover">Advertisement</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Company</h6>
+        <a class="link link-hover">About us</a>
+        <a class="link link-hover">Contact</a>
+        <a class="link link-hover">Jobs</a>
+        <a class="link link-hover">Press kit</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Legal</h6>
+        <a class="link link-hover">Terms of use</a>
+        <a class="link link-hover">Privacy policy</a>
+        <a class="link link-hover">Cookie policy</a>
+      </nav>
+    </footer>
+    <!-- footer end -->
+    <script src="./index.js"></script>
+  </body>
+</html>
